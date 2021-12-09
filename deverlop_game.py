@@ -6,7 +6,7 @@ import pickle
 pygame.init()
 
 clock = pygame.time.Clock()
-FPS = 60
+FPS = 24
 
 #game Window
 SCREEN_WIDTH = 800
@@ -173,8 +173,6 @@ while run:
 	if scroll_right == True and scroll < (MAX_COLS*TILE_SIZE)-SCREEN_WIDTH:
 		scroll += 5*scroll_speed
 
-	#add new tile to the screen
-	#get mouse position
 	pos = pygame.mouse.get_pos()
 	x = (pos[0]+scroll)//TILE_SIZE
 	y = pos[1]//TILE_SIZE
