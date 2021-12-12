@@ -157,7 +157,7 @@ while run:
 
 	#draw tile panel and tile
 	pygame.draw.rect(screen, GREEN, (SCREEN_WIDTH, 0, SIDE_MARGIN, SCREEN_HEIGHT))
-	
+
 	#choose a tile
 	button_count = 0
 	for button_count, i in enumerate(button_list):
@@ -185,7 +185,7 @@ while run:
 		if pygame.mouse.get_pressed()[0] == 1:
 			if world_data[y][x] != current_tile:
 				world_data[y][x] = current_tile
-		
+
 		if pygame.mouse.get_pressed()[2] == 1:
 			world_data[y][x] = -1
 
@@ -204,7 +204,7 @@ while run:
 				scroll_right = True
 			if event.key == pygame.K_RSHIFT:
 				scroll_speed = 5
-		
+
 		if event.type == pygame.KEYUP:
 			if event.key == pygame.K_LEFT:
 				scroll_left = False
