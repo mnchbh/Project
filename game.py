@@ -340,12 +340,12 @@ class World():
                     img_rect.x = x * TILE_SIZE
                     img_rect.y = y * TILE_SIZE
                     tile_data = (img, img_rect)
-                    if tile >= 0 and tile <= 8:
+                    if tile >= 0 and tile <= 8 or tile == 12:
                         self.obstacle_list.append(tile_data)
                     elif tile >= 9 and tile <= 10:
                         water = Water(img, x * TILE_SIZE, y * TILE_SIZE)
                         water_group.add(water)
-                    elif tile >= 11 and tile <= 14:
+                    elif tile == 11 or (tile > 12 and tile <= 14):
                         decoration = Decoration(img, x * TILE_SIZE, y * TILE_SIZE)
                         decoration_group.add(decoration)
                     elif tile == 16:#create player
